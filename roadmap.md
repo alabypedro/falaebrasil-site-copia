@@ -1,0 +1,72 @@
+# Roadmap
+
+- [x] Create `/bst3a` following the supplied 17-block brief; validate desktop/mobile, all five purchase CTAs, FAQ, real teacher photo and legal links; request publication.
+- [ ] Confirm `/bst3a` on the custom domain after deployment (blocked: publishing requested, latest production check still served the previous 404).
+- [x] Replace BST3A's requested checkout placeholder with the definitive checkout.
+- [ ] BST3A post-payment flow (email, thank-you, restricted app access to PDF + Leiaê + quizzes) (blocked: product not yet created in external app/Asaas config).
+- [x] Remove the duplicated support e-mail from `/bst3a`'s footer contact block and show WhatsApp (11) 98161-2800 and Instagram @joisalaby instead.
+
+- [x] Remove the monthly immersion section and residual links from `/adultos`; preserve section color alternation.
+- [x] Remove the monthly parent meeting section and residual links from `/kids-teens`; preserve section color alternation.
+- [x] Simplify `/planos` to the single PRO plan, remove the old VSL and event promotions, and add the supplied temporary PRO introduction.
+- [x] Verify the three updated pages on desktop, tablet, and mobile without changing customer accounts or subscriptions.
+- [x] Point the specified Adultos and Kids & Teens enrollment buttons to `/lp` without changing their appearance.
+- [x] Rename the main navigation label from “Planos” to “Nosso Plano” while preserving `/planos`.
+- [x] Validate every requested button and menu link on desktop, tablet, and mobile.
+- [x] Add “Guias BST” to the institutional menu and create the `/guias-bst` editorial storefront.
+- [x] Validate the new storefront and all four product links on desktop, tablet, and mobile.
+- [x] Reposition the Home as the Brasil Sem Trava storefront and permanently redirect `/guias-bst` to `/`.
+- [x] Validate the repositioned Home, navigation, guide links, and redirect on desktop, tablet, and mobile.
+- [x] Upgrade the Home hero with the four-guide premium split composition.
+- [x] Correct global, Adultos, and Kids & Teens enrollment destinations and validate all requested links.
+- [x] Add and validate the BST1 order-bump modal for the BST1 + BST4 combo.
+- [ ] Connect approved Asaas combo payments to automatic BST1 + BST4 access in the external student platform (blocked: payment/access handler is not in this project).
+- [x] Add the multiple-choice BST5 order-bump modal for BST5, BST1, and BST4 combinations.
+- [x] Validate every BST5 purchase button and all four checkout combinations on desktop, tablet, and mobile.
+- [ ] Connect approved Asaas BST5 combo payments to the exact purchased products in the external student platform (blocked: payment/access handler is not in this project).
+- [x] Add the BST2 order-bump modal for BST2 alone or BST2 + BST5, preserving the current landing page.
+- [ ] Connect approved Asaas BST2 + BST5 combo payments to both products in the external student platform (blocked: payment/access handler is not in this project).
+- [x] Add the three visual conversation comparisons and real-material demonstration to `/bst5` without changing its commercial structure.
+- [x] Validate the updated BST5 page and its existing four order-bump combinations on desktop, tablet, and mobile.
+- [x] Rebuild `/bst1` around practical travel situations, verified product facts, and the preserved BST1/BST4 order bump.
+- [x] Standardize legal footer links and checkout consent notices across Home, plans, enrollment LPs, and BST1/BST2/BST4/BST5.
+- [x] Validate legal links, final-offer notices, and BST modal state on desktop, tablet, and mobile.
+- [x] Rebuild `/bst2` around practical interview preparation, preserving the R$47 offer and BST2 + BST5 order bump.
+- [x] Validate the revised BST2 page and both checkout choices on desktop, tablet, and mobile.
+- [x] Rebuild `/bst4` as educational language preparation, removing approval claims while preserving its R$47 checkout.
+- [x] Validate the revised BST4 page and checkout on desktop, tablet, and mobile.
+
+- [x] Rebuild `/lp/adultos` around the current PRO subscription, removing discontinued public plans and outdated claims.
+- [x] Validate the revised Adult PRO landing page on desktop, tablet, and mobile.
+- [x] Rebuild `/lp/kids-teens` for parents around the current PRO subscription, age-specific content, app practice, and live classes.
+- [x] Validate the revised Kids & Teens PRO landing page on desktop, tablet, and mobile.
+- [x] Rebuild `/sobre` around the school, Brasil Sem Trava, English Transversal, and the concise founder biography.
+- [x] Reorganize `/duvidas` into current PRO, Kids & Teens, BST, payment, access, and support categories.
+- [x] Transform `/contato` into a support, enrollment, and guide contact hub using official channels.
+- [x] Align the shared institutional footer navigation with the current global navigation.
+- [x] Validate `/sobre`, `/duvidas`, and `/contato` on desktop, tablet, and mobile.
+- [x] Rebuild `/adultos` as a concise institutional introduction to the Adult PRO experience.
+- [x] Rebuild `/kids-teens` as a concise institutional introduction for families of students aged 8–17.
+- [x] Validate both institutional audience pages on desktop, tablet, and mobile.
+- [x] Replace legacy Meta Pixel installations with the official Falaê Brasil Pixel across all public routes.
+- [x] Configure single PageView and product-specific ViewContent events for the six priority sales pages.
+- [x] Validate InitiateCheckout payloads for every individual and order-bump checkout choice without firing Purchase.
+- [x] Validate the corrected BST2, BST4, and BST5 combo events on the published domain after deployment.
+- [x] Centralize the six commercial route events and all eleven checkout choices on the official Meta Pixel.
+- [x] Validate single PageView, ViewContent, and InitiateCheckout requests locally across all six commercial routes and eleven checkout choices.
+- [x] Validate the centralized Meta requests on the published domain after deployment.
+- [x] Guarantee global `fbq` compatibility when Meta exposes only `_fbq`, without duplicating initialization or events.
+- [x] Validate the compatibility fallback, BST2 browser events, and production behavior after publishing.
+- [x] Reinstall the official Meta Pixel base once globally and remove legacy aliases and non-commercial event calls.
+- [x] Validate real PageView and ViewContent network requests on BST2 after publishing.
+- [ ] Validate all commercial routes and checkout choices after the published deployment is stable.
+- [x] Insert the three real product images (apostila tablet, IA Leiaê screen, quiz screen) into the marked slots on `/bst3b`.
+- [x] Validate the three product images on `/bst3b` on desktop and mobile.
+- [x] Insert the supplied Desmonte a Frase product mockup into the hero's right-hand slot on `/bst3c`.
+- [x] Validate the `/bst3c` hero mockup on desktop, tablet, and mobile.
+
+- [x] Update every BST5 price to R$47, combo totals to R$74/R$64/R$91, and matching Meta values; validate all purchase choices.
+
+- [x] Update BST4 standalone price to R$27 across its LP, structured offer and Meta values; verify purchase destination.
+
+- [x] Order bump BST3A↔BST3B (R$44) com checkouts Asaas dedicados

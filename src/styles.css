@@ -1,0 +1,248 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Falaê Brasil! — Inglês Transversal
+ * Identidade institucional premium:
+ * - Azul-marinho corporativo (primary)
+ * - Cinza/gelo + branco (fundos)
+ * - Dourado executivo (CTA / detalhes pontuais)
+ */
+
+@theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "Playfair Display", Georgia, serif;
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 2px);
+  --radius-2xl: calc(var(--radius) + 4px);
+  --radius-3xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-mid: var(--brand-blue-mid);
+  --color-brand-blue-light: var(--brand-blue-light);
+  --color-brand-ice: var(--brand-ice);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-cta: var(--brand-cta);
+  /* Compatibilidade com classes legadas do site institucional */
+  --color-brand-yellow: var(--brand-ice);
+  --color-brand-green: var(--brand-blue-mid);
+  --shadow-soft: 0 1px 2px 0 rgb(2 48 89 / 0.04), 0 8px 24px -12px rgb(2 48 89 / 0.14);
+  --shadow-elevated: 0 18px 40px -22px rgb(2 48 89 / 0.28);
+  --shadow-cta: 0 8px 20px -10px rgb(214 162 61 / 0.55);
+  --gradient-corporate: linear-gradient(135deg, #023059 0%, #071521 100%);
+  --gradient-ice: linear-gradient(180deg, #ffffff 0%, #eef2f5 100%);
+}
+
+:root {
+  --radius: 1rem;
+  --background: #ffffff;
+  --foreground: #17212b;
+  --card: #ffffff;
+  --card-foreground: #17212b;
+  --popover: #ffffff;
+  --popover-foreground: #17212b;
+
+  /* Brand: azul-marinho institucional */
+  --primary: #023059;
+  --primary-foreground: #ffffff;
+
+  --secondary: #eef2f5;
+  --secondary-foreground: #023059;
+
+  --muted: #eef2f5;
+  --muted-foreground: #55657a;
+
+  /* Accent: dourado executivo (CTA principal) */
+  --accent: #d6a23d;
+  --accent-foreground: #071521;
+
+  --success: #5f8fc4;
+  --success-foreground: #ffffff;
+
+  --destructive: #c2452f;
+  --destructive-foreground: #ffffff;
+
+  --border: #dde5ec;
+  --input: #dde5ec;
+  --ring: #5f8fc4;
+
+  /* Brand tokens (puros) */
+  --brand-navy: #071521;
+  --brand-blue: #023059;
+  --brand-blue-mid: #5f8fc4;
+  --brand-blue-light: #afcedb;
+  --brand-ice: #eef2f5;
+  --brand-gold: #b08d57;
+  --brand-cta: #d6a23d;
+}
+
+.dark {
+  --background: #071521;
+  --foreground: #eef2f5;
+  --card: #0d2437;
+  --card-foreground: #eef2f5;
+  --popover: #0d2437;
+  --popover-foreground: #eef2f5;
+  --primary: #afcedb;
+  --primary-foreground: #071521;
+  --secondary: #0d2437;
+  --secondary-foreground: #eef2f5;
+  --muted: #0d2437;
+  --muted-foreground: #afcedb;
+  --accent: #d6a23d;
+  --accent-foreground: #071521;
+  --success: #5f8fc4;
+  --success-foreground: #071521;
+  --destructive: #e0715c;
+  --destructive-foreground: #071521;
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #d6a23d;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand-cta);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-corporate { background-image: var(--gradient-corporate); }
+  .bg-gradient-ice { background-image: var(--gradient-ice); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-cta { box-shadow: var(--shadow-cta); }
+  .text-balance { text-wrap: balance; }
+  .font-editorial { font-family: var(--font-editorial); }
+  .animate-fade-up { animation: fadeUp 0.6s ease-out both; }
+  .text-brand-navy { color: var(--brand-navy); }
+  .text-brand-blue { color: var(--brand-blue); }
+  .text-brand-blue-mid { color: var(--brand-blue-mid); }
+  .text-brand-gold { color: var(--brand-gold); }
+  .text-brand-green { color: var(--brand-blue-mid); }
+  .text-brand-yellow { color: var(--brand-gold); }
+  .bg-brand-navy { background-color: var(--brand-navy); }
+  .bg-brand-blue { background-color: var(--brand-blue); }
+  .bg-brand-blue-mid { background-color: var(--brand-blue-mid); }
+  .bg-brand-blue-light { background-color: var(--brand-blue-light); }
+  .bg-brand-ice { background-color: var(--brand-ice); }
+  .bg-brand-gold { background-color: var(--brand-gold); }
+  .bg-brand-cta { background-color: var(--brand-cta); }
+  .bg-brand-yellow { background-color: var(--brand-ice); }
+  .bg-brand-green { background-color: var(--brand-blue); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-fade-up { animation: none; }
+  * { transition-duration: 0.001ms !important; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dedicated, isolated school-support campaign. */
+@theme inline {
+  --color-study-navy: var(--study-navy);
+  --color-study-teal: var(--study-teal);
+  --color-study-yellow: var(--study-yellow);
+  --color-study-coral: var(--study-coral);
+  --color-study-cream: var(--study-cream);
+  --color-study-blue: var(--study-blue);
+  --color-study-green: var(--study-green);
+}
+.bst3a-page {
+  --study-navy: oklch(0.28832 0.0503 265.9);
+  --study-teal: oklch(0.70315 0.11783 178.477);
+  --study-yellow: oklch(0.86147 0.14231 82.662);
+  --study-coral: oklch(0.71161 0.18122 22.839);
+  --study-cream: oklch(0.9813 0.01751 81.333);
+  --study-blue: oklch(0.96582 0.01608 262.753);
+  --study-green: oklch(0.9679 0.01526 181.785);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.30867 0.01947 229.784);
+  --primary: var(--study-navy);
+  --primary-foreground: oklch(1 0 0);
+  --muted-foreground: oklch(0.54739 0.02908 244.757);
+  --border: oklch(0.906 0.014 245);
+  --ring: var(--study-teal);
+  --accent: var(--study-coral);
+  --accent-foreground: oklch(1 0 0);
+  --study-cta-hover: oklch(0.649 0.196 23);
+  --study-cta-shadow: 0 6px 0 color-mix(in oklab, var(--study-coral), var(--study-navy) 20%);
+  font-family: "Lato", ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--foreground);
+  background: var(--background);
+}
+.bst3a-page h1, .bst3a-page h2, .bst3a-page h3 { color: var(--study-navy); letter-spacing: 0; line-height: 1.2; }
+.bst3a-page h1 { font-size: 34px; }
+.bst3a-page h2 { font-size: 30px; }
+.bst3a-page h3 { font-size: 21px; }
+.study-inner { width: 100%; max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+.study-band { padding-block: 64px; }
+.study-heading { max-width: 800px; margin: 0 auto 36px; text-align: center; text-wrap: balance; }
+.study-dark { background: var(--study-navy); color: var(--primary-foreground); }
+.study-dark h2, .study-dark h3 { color: var(--primary-foreground); }
+.study-cta { min-height: 60px; height: auto; white-space: normal; width: 100%; max-width: 540px; padding: 18px 24px; font-size: 15px; font-weight: 700; line-height: 1.4; letter-spacing: 0; border-radius: 8px; background: var(--study-coral); color: var(--accent-foreground); box-shadow: var(--study-cta-shadow); }
+.study-cta:hover { background: var(--study-cta-hover); }
+.study-card { border: 1px solid var(--border); border-radius: 16px; padding: 28px; background: var(--background); }
+.study-number { width: 48px; height: 48px; display: grid; place-items: center; background: var(--study-green); color: var(--study-navy); border-radius: 50%; font-weight: 700; font-size: 20px; }
+.study-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+.study-price { font-size: 52px; line-height: 1.15; font-weight: 700; letter-spacing: 0; }
+.study-price small { font-size: 24px; }
+.study-hero { padding-top: 28px; padding-bottom: 48px; }
+.study-hero-image { width: 100%; max-width: 820px; height: auto; margin-inline: auto; border-radius: 16px; }
+.study-check { flex-shrink: 0; color: var(--study-navy); width: 20px; height: 20px; margin-top: 5px; }
+.study-footer { padding-block: 48px; font-size: 14px; text-align: center; }
+@media (min-width: 768px) {
+  .bst3a-page h1 { font-size: 48px; }
+  .bst3a-page h2 { font-size: 36px; }
+  .study-band { padding-block: 80px; }
+  .study-hero { padding-top: 32px; }
+}
+
